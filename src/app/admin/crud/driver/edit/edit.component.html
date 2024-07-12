@@ -1,0 +1,54 @@
+
+<app-navbar2></app-navbar2>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="flex flex-wrap align-items-center justify-content-center">
+<form [formGroup]="form"  >
+    
+    <div margin="my-6">
+      <p-inputGroup class="p-field my-6">
+        <p-inputGroupAddon>
+          <i class="pi pi-user"></i>
+        </p-inputGroupAddon>
+        <input pInputText placeholder="name" formControlName="name"/>
+      </p-inputGroup>
+    </div>
+    
+    <div>
+        <p-inputGroup class="p-field p-m-5">
+          <p-inputGroupAddon>
+            <i class="pi pi-map-marker"></i>
+          </p-inputGroupAddon>
+          <input pInputText placeholder="direccion" formControlName="address" />
+        </p-inputGroup>
+    </div>
+    <div>
+        <p-inputGroup class="p-field p-mb-2">
+          <p-inputGroupAddon>
+            <i class="pi pi-phone"></i>
+          </p-inputGroupAddon>
+          <input pInputText placeholder="telefono" formControlName="phone"/>
+        </p-inputGroup>
+    </div>
+    <div>
+        <p-inputGroup class="p-field p-mb-2">
+          <p-inputGroupAddon>
+            <i class="pi pi-at"></i>
+          </p-inputGroupAddon>
+          <input pInputText placeholder="email" formControlName="email_address" />
+        </p-inputGroup>
+    </div>
+    <br>
+    <p-button (click)="save()" severity="success">
+        Agregar
+    </p-button>
+  </form>
+
+
+</div>

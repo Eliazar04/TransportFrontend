@@ -1,0 +1,32 @@
+<!-- src/app/components/driver-list/driver-list.component.html -->
+
+
+<app-navbar2></app-navbar2>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<div>
+    <p-button icon="pi pi-user-plus" routerLink="new" severity="success">
+       
+    </p-button>
+</div>
+
+
+
+<app-table [data]="drivers" [cols]="cols"
+ [name]="name" (editEvent)="onEdit($event)"
+  (deleteEvent)="deleteDriver($event)"
+  [ngStyle]="{'width': '50%', 'height': '300px'}"
+  [icon1]="icon1" [icon2]="icon2"
+  >
+</app-table>
+
+<!-- dialogo para editar-->
+
+
+
+

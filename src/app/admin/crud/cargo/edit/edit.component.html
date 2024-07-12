@@ -1,0 +1,57 @@
+<app-navbar2></app-navbar2>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="form-container">
+    <form [formGroup]="form"  >
+        
+        <div>
+          <p-inputGroup  >
+            <p-inputGroupAddon>
+              <i class="pi pi-book"></i>
+            </p-inputGroupAddon>
+           
+            <input pInputText placeholder="descripcion" formControlName="description"/>
+          </p-inputGroup>
+        </div>
+        <br>
+        <div >
+            <p-inputGroup >
+              <p-inputGroupAddon>
+                <i class="pi pi-gauge"></i>
+              </p-inputGroupAddon>
+              <p-inputNumber   inputId="minmaxfraction" 
+              mode="decimal" 
+              [minFractionDigits]="2" 
+              [maxFractionDigits]="5"   mode="decimal" placeholder="peso" formControlName="weight" />
+            </p-inputGroup>
+        </div>
+        
+        <div>
+            <p-inputGroup >
+              <p-inputGroupAddon>
+                <i class="pi pi-box"></i>
+              </p-inputGroupAddon>
+              <input pInputText placeholder="dimensiones" formControlName="dimensions"/>
+            </p-inputGroup>
+        </div>
+        <div>
+            <p-inputGroup >
+              <p-inputGroupAddon>
+                <i class="pi pi-wave-pulse"></i>
+              </p-inputGroupAddon>
+              <input pInputText placeholder="estado" formControlName="status" />
+            </p-inputGroup>
+        </div>
+        <br>
+        <p-button (click)="save()" severity="success">
+            Agregar
+        </p-button>
+      </form>
+    </div>
+    
+      

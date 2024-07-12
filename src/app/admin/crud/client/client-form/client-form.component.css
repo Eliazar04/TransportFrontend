@@ -1,0 +1,34 @@
+.form-container {
+    max-width: 200px; /* Ajusta esto según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+  }
+  
+  .p-inputGroup {
+    width: 200%; /* Asegura que el grupo de entrada no se extienda */
+  }
+  
+  .p-inputGroupAddon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .p-inputNumber {
+    flex: 3 ;
+  }
+  
+  
+  /* styles.css o styles.scss */
+
+.custom-float-label {
+  width: 800px; /* Ajusta el ancho según tus necesidades */
+}
+
+.custom-float-label input {
+  width: 100%; /* Para que el input ocupe todo el ancho del contenedor */
+  height: 40px; /* Ajusta la altura según tus necesidades */
+  font-size: 16px; /* Ajusta el tamaño de la fuente del input */
+}
+
+.custom-float-label label {
+  font-size: 14px; /* Ajusta el tamaño de la fuente del label */
+}

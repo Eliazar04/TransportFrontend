@@ -1,0 +1,45 @@
+
+<app-navbar2></app-navbar2>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div>
+    <h2 class="form-title">Realizar Envío</h2>
+  </div>
+  
+  <form>
+    <button (click)="sendData()">
+      Agregar
+    </button>
+    <h2>Seleccione el cliente</h2>
+    <select [(ngModel)]="selectedClientId" name="client">
+      <option *ngFor="let client of clients" [value]="client.id">{{ client.name }}</option>
+    </select>
+  
+    <h2>Seleccione el conductor</h2>
+    <select [(ngModel)]="selectedDriverId" name="driver">
+      <option *ngFor="let driver of drivers" [value]="driver.id">{{ driver.name }}</option>
+    </select>
+  
+    <h2>Seleccione el cargo</h2>
+    <select [(ngModel)]="selectedCargoId" name="cargo">
+      <option *ngFor="let cargo of cargos" [value]="cargo.id">{{ cargo.description }}</option>
+    </select>
+  
+    <h2>Seleccione el vehículo</h2>
+    <select [(ngModel)]="selectedVehicleId" name="vehicle">
+      <option *ngFor="let vehicle of vehicles" [value]="vehicle.id">{{ vehicle.licence_plate }}</option>
+    </select>
+  
+    <h2>Seleccione la ruta</h2>
+    <select [(ngModel)]="selectedRouteId" name="route">
+      <option *ngFor="let route of routes" [value]="route.id">{{ route.origin + ' to ' + route.destination }}</option>
+    </select>
+  
+    
+  </form>

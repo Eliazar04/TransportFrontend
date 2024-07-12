@@ -1,0 +1,30 @@
+<!-- tracking.component.html -->
+
+
+<app-navbar2></app-navbar2>
+
+
+<br>
+<br>
+<br>
+<br>
+<div class="tracking-container">
+    <h2 class="title">Seguimiento</h2>
+    <div class="input-container">
+      <input type="text" [(ngModel)]="cargoId" placeholder="Ingrese el ID" />
+      <button (click)="fetchCargo()">Buscar</button>
+    </div>
+    <div *ngIf="cargo" class="cargo-details">
+      <h3>Detalles del Cargo</h3>
+      <p><strong>ID:</strong> {{ cargo.id }}</p>
+      <p><strong>Descripción:</strong> {{ cargo.description }}</p>
+      <p><strong>Peso:</strong> {{ cargo.weight }}</p>
+      <p><strong>Dimensiones:</strong> {{ cargo.dimensions }}</p>
+      <p><strong>Estado:</strong> {{ cargo.status }}</p>
+    </div>
+    <div class="input-container">
+        <button (click)="volverCargo()">Regresar</button>
+      </div>
+  </div>
+
+  

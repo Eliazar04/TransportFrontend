@@ -1,0 +1,25 @@
+.navbar-custom {
+    background-color: transparent; /* Hacer que la barra de navegación sea transparente */
+    /*z-index: 1000;  Asegurar que la barra de navegación esté por encima de la imagen */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+    color: white; /* Asegurar que el texto sea visible sobre la imagen */
+    
+}
+.navbar-custom .nav-link:hover,
+.navbar-custom .navbar-brand:hover {
+    color: #ddd; /* Color del texto al pasar el mouse */
+}
+
+.navbar-custom.scrolled {
+    background-color: #2F1B00; /* Color marrón oscuro */
+}
+
+@media (max-width: 768px) {
+    /* Estilos para dispositivos móviles */
+    .navbar-custom.mobile-menu-open {
+      background-color: #2F1B00; /* Color marrón oscuro al abrir el menú en dispositivos móviles */
+    }
+}

@@ -1,0 +1,65 @@
+
+<app-navbar2></app-navbar2>
+
+
+<br>
+<br>
+<br>
+<br>
+<div class="form-container">
+<form [formGroup]="form"  >
+    
+    <div>
+      <p-inputGroup >
+        <p-inputGroupAddon>
+          <i class="pi pi-ticket"></i>
+        </p-inputGroupAddon>
+        <input pInputText placeholder="licence plate" formControlName="licence_plate"/>
+      </p-inputGroup>
+    </div>
+    <br>
+    <div>
+        <p-inputGroup >
+          <p-inputGroupAddon>
+            <i class="pi pi-truck"></i>
+          </p-inputGroupAddon>
+          <input pInputText placeholder="modelo" formControlName="model" />
+        </p-inputGroup>
+    </div>
+    <br>
+    <div>
+        <p-inputGroup >
+          <p-inputGroupAddon>
+            <i class="pi pi-calendar"></i>
+          </p-inputGroupAddon>
+          <p-inputNumber 
+          placeholder="año" formControlName="year"
+         inputId="minmax" 
+            
+            [min]="2000" 
+            [max]="2024" />
+        
+        </p-inputGroup>
+    </div>
+    <br>
+    <div>
+        <p-inputGroup >
+          <p-inputGroupAddon>
+            <i class="pi pi-warehouse"></i>
+          </p-inputGroupAddon>
+          <p-inputNumber  
+          inputId="minmaxfraction" 
+            mode="decimal" 
+        [minFractionDigits]="2" 
+            [maxFractionDigits]="5" placeholder="capacidad" formControlName="load_capacity" />
+        </p-inputGroup>
+    </div>
+    
+    <br>
+    <p-button (click)="create()" severity="success">
+        Agregar
+    </p-button>
+  </form>
+
+</div>
+  
