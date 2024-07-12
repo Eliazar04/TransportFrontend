@@ -30,7 +30,7 @@ export  default class LitComponent implements OnInit {
         const vehicle = vehicles.find(v => v.id === delivery.vehicle_id);
         const cargo = cargos.find(c => c.id === delivery.cargo_id);
         const route = routes.find(r => r.id === delivery.route_id);
-
+        // hola mundo
         return {
           ...delivery,
           client_name: client ? client.name : 'Unknown Client',
