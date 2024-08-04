@@ -4,11 +4,11 @@ import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Vali
 import { CommonModule } from '@angular/common';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
-import { DriverService } from '../../../services/driver.service';
+import { DriverService } from '../../../../services/driver.service';
 import { Router, RouterModule } from '@angular/router';
-import { driverM } from '../../../models/driverModel';
+import { driverM } from '../../../../models/driverModel';
 import { ButtonModule } from 'primeng/button';
-import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
+import { Navbar2Component } from '../../../../main/navbar2/navbar2.component';
 @Component({
   selector: 'app-driver-form',
   standalone: true,

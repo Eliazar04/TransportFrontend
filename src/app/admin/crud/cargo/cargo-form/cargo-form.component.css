@@ -1,19 +1,13 @@
+/* Center the form and limit margins */
 .form-container {
-    max-width: 244px; /* Ajusta esto según tus necesidades */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-  }
-  
-  .p-inputGroup {
-    width: 100%; /* Asegura que el grupo de entrada no se extienda */
-  }
-  
-  .p-inputGroupAddon {
-    display: flex;
-    align-items: center;
-  }
-  
-  .p-inputNumber {
-    flex: 3 ;
-  }
-  
-  
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Add padding and border for better presentation */
+.form-container {
+  padding: 20px;
+  border: 0px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}

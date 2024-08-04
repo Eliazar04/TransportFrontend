@@ -1,9 +1,9 @@
 import { Component, OnInit, inject } from '@angular/core';
-import {VehicleService} from '../../services/vehicle.service';
+import {VehicleService} from '../../../services/vehicle.service';
 import { CommonModule, } from '@angular/common';
-import { vehicleM } from '../../models/vehicleModel';
+import { vehicleM } from '../../../models/vehicleModel';
 import { TableModule } from 'primeng/table';
-import { TableComponent } from '../shared/table/table.component';
+import { TableComponent } from '../../shared/table/table.component';
 import {  Router, RouterModule } from '@angular/router';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
@@ -12,7 +12,7 @@ import { DialogService } from 'primeng/dynamicdialog';
 
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
-import { Navbar2Component } from '../../main/navbar2/navbar2.component';
+import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
 @Component({
   selector: 'app-vehicle',
   standalone: true,

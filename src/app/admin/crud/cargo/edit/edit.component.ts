@@ -9,14 +9,14 @@ import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Vali
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
-import { CargoService } from '../../../services/cargo.service';
+import { CargoService } from '../../../../services/cargo.service';
 import { Router, RouterModule } from '@angular/router';
-import { cargoM } from '../../../models/cargoModel';
+import { cargoM } from '../../../../models/cargoModel';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { BrowserModule } from '@angular/platform-browser';
-import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
+import { Navbar2Component } from '../../../../main/navbar2/navbar2.component';
 @Component({
   selector: 'app-edit',
   standalone: true,
@@ -24,7 +24,7 @@ import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.css'
 })
-export  default class EditComponent implements OnInit {
+export  default class EditComponentCargo implements OnInit {
   
   private id:number;
   private cargo!:cargoM

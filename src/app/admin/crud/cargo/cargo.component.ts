@@ -1,20 +1,21 @@
 import { Component, OnInit, inject } from '@angular/core';
-import {CargoService} from '../../services/cargo.service';
+import {CargoService} from '../../../services/cargo.service';
 import { CommonModule, } from '@angular/common';
-import { cargoM } from '../../models/cargoModel';
+import { cargoM } from '../../../models/cargoModel';
 import { TableModule } from 'primeng/table';
-import { TableComponent } from '../shared/table/table.component';
+
 import {  Router, RouterModule } from '@angular/router';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { DialogService } from 'primeng/dynamicdialog';
 import {  InputGroupAddonModule } from 'primeng/inputgroupaddon';
-import { Navbar2Component } from '../../main/navbar2/navbar2.component';
+import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
 import { InputGroupModule } from 'primeng/inputgroup';
+import { TableComponent } from '../../shared/table/table.component';
 @Component({
   selector: 'app-cargo',
   standalone: true,
-  imports: [InputGroupModule,InputGroupAddonModule,TableModule,CommonModule,TableComponent,RouterModule,DialogModule,ButtonModule,Navbar2Component],
+  imports: [InputGroupModule,InputGroupAddonModule,TableModule,CommonModule,RouterModule,DialogModule,ButtonModule,Navbar2Component,TableComponent],
   templateUrl: './cargo.component.html',
   styleUrl: './cargo.component.css'
 })
@@ -37,6 +38,7 @@ export default class cargoComponent implements OnInit {
       this.cargoService.list()
       .subscribe(cargos=>{
         this.cargos=cargos;
+        console.log(this.cargos)
       });
       this.cols=[{ field: 'id', header: 'ID' },
       { field: 'description', header: 'Descripcion' },

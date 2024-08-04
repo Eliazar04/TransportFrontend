@@ -1,14 +1,14 @@
 
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { ClientService } from '../../../services/client.service';
-import { clientM } from '../../../models/clientModel';
+import { ClientService } from '../../../../services/client.service';
+import { clientM } from '../../../../models/clientModel';
 import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { ButtonModule } from 'primeng/button';
-import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
+import { Navbar2Component } from '../../../../main/navbar2/navbar2.component';
 @Component({
   selector: 'app-edit',
   standalone: true,
@@ -16,7 +16,7 @@ import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.css'
 })
-export  default class EditComponent implements OnInit {
+export  default class EditComponentClient implements OnInit {
   
   private id:number;
   private client!:clientM

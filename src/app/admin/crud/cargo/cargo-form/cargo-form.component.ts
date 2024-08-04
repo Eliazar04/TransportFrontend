@@ -1,16 +1,16 @@
 import { Component, NgModule, inject, input } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
-import { CargoService } from '../../../services/cargo.service';
+import { CargoService } from '../../../../services/cargo.service';
 import { Router, RouterModule } from '@angular/router';
-import { cargoM } from '../../../models/cargoModel';
+import { cargoM } from '../../../../models/cargoModel';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { BrowserModule } from '@angular/platform-browser';
-import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
+import { Navbar2Component } from '../../../../main/navbar2/navbar2.component';
 @Component({
   selector: 'app-cargo-form',
   standalone: true,
@@ -28,13 +28,18 @@ export default class cargoFormComponent {
   ) {
     this.form = this.fb.group({
       description: ['', Validators.required], // 
-      weight: [null, [Validators.required,Validators.min(0)]],
+      weight: [null, [Validators.required,this.negativeNumberValidator]],
       dimensions: ['', Validators.required],
       status: ['', [Validators.required]] //
        
     });
   }
-
+  negativeNumberValidator(control: AbstractControl): { [key: string]: boolean } | null {
+    if (control.value < 0) {
+      return { 'negativeNumber': true };
+    }
+    return null;
+  }
   create() {
     if (this.form.valid) {
       const  cargoData :cargoM= this.form.value;
@@ -43,6 +48,10 @@ export default class cargoFormComponent {
         this.router.navigate(['/cargo']); // Redirigir a la página principal después de crear el conductor
       });
     }
+  }
+
+  get weightControl() {
+    return this.form.get('weight');
   }
 }
 

@@ -1,26 +1,19 @@
 import { Routes } from '@angular/router';
 import { MainComponent } from './main/main/main.component';
 
+
+
+
+
+
 export const routes: Routes = [
+   
+   
+
+    //{path:'',loadComponent:()=>import("./main/main/main.component")},
 
 
-    //
-    {
-        path:'', 
-        loadChildren:()=>import ('./admin/admin.routes').then(m=>m.Admin_routes)
-    }
-
-
-
-
-
-
-
-
-
-
-
-/*
+   
 
     { path: 'login', loadComponent: () => import("./authentication/login/login.component")},
     // Puedes agregar más rutas aquí si es necesario
@@ -30,70 +23,69 @@ export const routes: Routes = [
     
     {
         path:'driver',
-        loadComponent:()=>import('./components/driver/driver.component')
+        loadComponent:()=>import('./admin/crud/driver/driver.component')
     },
     {
         path:'driver/new',
-        loadComponent:()=>import('./components/driver/driver-form/driver-form.component')
+        loadComponent:()=>import('./admin/crud/driver/driver-form/driver-form.component')
     },
     {
         path:'driver/update/:id',
-        loadComponent:()=>import('./components/driver/edit/edit.component')
+        loadComponent:()=>import('./admin/crud/driver/edit/edit.component')
     },
 //   rutas para la clase cliente en angular
     {
         path:'client',
-        loadComponent:()=>import('./components/client/client.component')
+        loadComponent:()=>import('./admin/crud/client/client.component')
     },
     {
         path:'client/new',
-        loadComponent:()=>import('./components/client/client-form/client-form.component')
+        loadComponent:()=>import('./admin/crud/client/client-form/client-form.component')
     },
     {
         path:'client/update/:id',
-        loadComponent:()=>import('./components/client/edit/edit.component')
+        loadComponent:()=>import('./admin/crud/client/edit/edit.component')
     },
     // rutas para vehiculos 
     {
         path:'vehicle',
-        loadComponent:()=>import('./components/vehicle/vehicle.component')
+        loadComponent:()=>import('./admin/crud/vehicle/vehicle.component')
     },
     {
         path:'vehicle/new',
-        loadComponent:()=>import('./components/vehicle/vehicle-form/vehicle-form.component')
+        loadComponent:()=>import('./admin/crud/vehicle/vehicle-form/vehicle-form.component')
     },
     {
         path:'vehicle/update/:id',
-        loadComponent:()=>import('./components/vehicle/edit/edit.component')
+        loadComponent:()=>import('./admin/crud/vehicle/edit/edit.component')
     },
     //  rutas para paquetes
     {
         path:'cargo',
-        loadComponent:()=>import('./components/cargo/cargo.component')
+        loadComponent:()=>import('./admin/crud/cargo/cargo.component')
     },
     {
         path:'cargo/new',
-        loadComponent:()=>import('./components/cargo/cargo-form/cargo-form.component')
+        loadComponent:()=>import('./admin/crud/cargo/cargo-form/cargo-form.component')
     },
     {
         path:'cargo/update/:id',
-        loadComponent:()=>import('./components/cargo/edit/edit.component')
+        loadComponent:()=>import('./admin/crud/cargo/edit/edit.component')
     },
     
   // ruta de envios
     {
     path:'delivery',
-    loadComponent:()=>import('./components/delivery/delivery/delivery.component')
+    loadComponent:()=>import('./admin/delivery/delivery/delivery.component')
     },
     {
         path:'tracking',
-        loadComponent:()=>import('./components/tracking/tracking.component')
+        loadComponent:()=>import('./admin/tracking/tracking.component')
     },
     {
         path:'listd',
-        loadComponent:()=>import('./components/delivery/lit/lit.component')
+        loadComponent:()=>import('./admin/delivery/lit/lit.component')
     },
 
-*/
 
 ];

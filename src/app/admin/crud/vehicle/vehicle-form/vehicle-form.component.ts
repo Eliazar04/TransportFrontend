@@ -3,12 +3,12 @@ import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Vali
 
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
-import { VehicleService } from '../../../services/vehicle.service';
+import { VehicleService } from '../../../../services/vehicle.service';
 import { Router, RouterModule } from '@angular/router';
-import { vehicleM } from '../../../models/vehicleModel';
+import { vehicleM } from '../../../../models/vehicleModel';
 import { ButtonModule } from 'primeng/button';
 import { InputNumberModule } from 'primeng/inputnumber';
-import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
+import { Navbar2Component } from '../../../../main/navbar2/navbar2.component';
 @Component({
   selector: 'app-vehicle-form',
   standalone: true,

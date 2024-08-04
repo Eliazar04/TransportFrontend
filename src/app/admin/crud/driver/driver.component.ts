@@ -1,14 +1,14 @@
 import { Component, OnInit, inject } from '@angular/core';
-import {DriverService} from '../../services/driver.service';
+import {DriverService} from '../../../services/driver.service';
 import { CommonModule, } from '@angular/common';
-import { driverM } from '../../models/driverModel';
+import { driverM } from '../../../models/driverModel';
 import { TableModule } from 'primeng/table';
-import { TableComponent } from '../shared/table/table.component';
+import { TableComponent } from '../../shared/table/table.component';
 import {  Router, RouterModule } from '@angular/router';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { DialogService } from 'primeng/dynamicdialog';
-import { Navbar2Component } from '../../main/navbar2/navbar2.component';
+import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
 
 @Component({
   selector: 'app-driver',
