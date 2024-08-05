@@ -5,8 +5,12 @@
 <br>
 <br>
 <br>
-
+<br>
+<br>
 <div class="form-container">
+  <div>
+    <h4 class="form-title">Agregar Nuevo Conductor</h4>
+  </div>
 <form [formGroup]="form"  >
     
     <div>
@@ -17,7 +21,10 @@
         <input pInputText placeholder="name" formControlName="name"/>
       </p-inputGroup>
     </div>
-    
+    <div *ngIf="name.invalid && name.touched" class="text-danger">
+      El nombre es requerido.
+    </div>
+    <br>
     <div>
         <p-inputGroup >
           <p-inputGroupAddon>
@@ -26,6 +33,10 @@
           <input pInputText placeholder="direccion" formControlName="address" />
         </p-inputGroup>
     </div>
+    <div *ngIf="address.invalid && address.touched" class="text-danger">
+      La dirección es requerida.
+    </div>
+    <br>
     <div>
         <p-inputGroup >
           <p-inputGroupAddon>
@@ -34,6 +45,10 @@
           <input pInputText placeholder="telefono" formControlName="phone"/>
         </p-inputGroup>
     </div>
+    <div *ngIf="phone.invalid && phone.touched" class="text-danger">
+      El teléfono es requerido.
+    </div>
+    <br>
     <div>
         <p-inputGroup >
           <p-inputGroupAddon>
@@ -42,13 +57,18 @@
           <input pInputEmail placeholder="email" formControlName="email_address" />
         </p-inputGroup>
     </div>
-    
-
-
+    <div *ngIf="email_address.invalid && email_address.touched" class="text-danger">
+      El correo es requerido y debe ser válido.
+    </div>
     <br>
-    <p-button (click)="create()" severity="success">
-        Agregar
-    </p-button>
+    <div class="button-container">
+      <p-button (click)="create()" severity="success" class="button">
+          Agregar
+      </p-button>
+      <p-button (click)="cancel()" severity="secondary" class="button">
+        Cancelar
+      </p-button>
+    </div>
   </form>
 </div>
 

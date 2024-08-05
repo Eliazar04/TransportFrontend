@@ -2,10 +2,10 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Route } from '@angular/router';
 
-
+import { AbstractControl } from '@angular/forms';
 
 import {  NgModule, input } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Validators, ValidationErrors } from '@angular/forms';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
@@ -81,6 +81,18 @@ export  default class EditComponentCargo implements OnInit {
       });
     }
   }
-
+  negativeNumberValidator(control: AbstractControl): { [key: string]: boolean } | null {
+    if (control.value < 0) {
+      return { 'negativeNumber': true };
+    }
+    return null;
+  }
+  cancel() {
+    // Redirigir a otra ruta, por ejemplo, la página principal
+    this.router.navigate(['/cargo']);
+  }
+  get weightControl() {
+    return this.form.get('weight');
+  }
 
 }

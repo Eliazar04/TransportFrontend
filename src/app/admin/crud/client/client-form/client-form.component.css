@@ -1,5 +1,5 @@
 .form-container {
-    max-width: 200px; /* Ajusta esto según tus necesidades */
+    max-width: 300px; /* Ajusta esto según tus necesidades */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
   }
   
@@ -31,4 +31,7 @@
 
 .custom-float-label label {
   font-size: 14px; /* Ajusta el tamaño de la fuente del label */
+}
+.button-container .button {
+  margin-right: 10px; /* Puedes ajustar este valor según la separación que desees */
 }

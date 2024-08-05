@@ -1,6 +1,6 @@
 import { Component, NgModule, inject, input } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { VehicleService } from '../../../../services/vehicle.service';
@@ -13,7 +13,7 @@ import { Navbar2Component } from '../../../../main/navbar2/navbar2.component';
   selector: 'app-vehicle-form',
   standalone: true,
   imports: [InputGroupAddonModule,InputGroupModule,FormsModule,ReactiveFormsModule,RouterModule,ButtonModule,InputNumberModule,Navbar2Component
-  ]
+  , CommonModule]
   ,
   templateUrl: './vehicle-form.component.html',
   styleUrl: './vehicle-form.component.css'
@@ -43,6 +43,15 @@ export default class vehicleFormComponent {
       });
     }
   }
+  cancel() {
+    // Redirigir a otra ruta, por ejemplo, la página principal
+    this.router.navigate(['/vehicle']);
+  }
+  // Métodos de acceso seguros
+  get licence_plate() { return this.form.get('licence_plate')!; }
+  get model() { return this.form.get('model')!; }
+  get year() { return this.form.get('year')!; }
+  get load_capacity() { return this.form.get('load_capacity')!; }
 }
 
 

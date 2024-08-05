@@ -1,6 +1,6 @@
 /* Center the form and limit margins */
 .form-container {
-  max-width: 80%;
+  max-width: 50%;
   margin: 0 auto;
 }
 
@@ -10,4 +10,7 @@
   border: 0px solid #ddd;
   border-radius: 10px;
   background-color: #fff;
+}
+.button {
+  margin-right: 10px; /* Puedes ajustar este valor según la separación que desees */
 }

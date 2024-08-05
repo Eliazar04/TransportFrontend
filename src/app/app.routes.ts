@@ -14,7 +14,7 @@ export const routes: Routes = [
 
 
    
-
+    {path:'dl',loadComponent:()=>import("./main/listad/listad.component")},
     { path: 'login', loadComponent: () => import("./authentication/login/login.component")},
     // Puedes agregar más rutas aquí si es necesario
     { path: '', component: MainComponent},
@@ -82,10 +82,7 @@ export const routes: Routes = [
         path:'tracking',
         loadComponent:()=>import('./admin/tracking/tracking.component')
     },
-    {
-        path:'listd',
-        loadComponent:()=>import('./admin/delivery/lit/lit.component')
-    },
-
+    
+    
 
 ];

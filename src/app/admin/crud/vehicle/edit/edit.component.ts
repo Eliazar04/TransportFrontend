@@ -4,15 +4,16 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 import { VehicleService } from '../../../../services/vehicle.service';
 import { vehicleM } from '../../../../models/vehicleModel';
 import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 import { InputGroupModule } from 'primeng/inputgroup';
+import { InputNumberModule } from 'primeng/inputnumber';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { ButtonModule } from 'primeng/button';
 import { Navbar2Component } from '../../../../main/navbar2/navbar2.component';
 @Component({
   selector: 'app-edit',
   standalone: true,
-  imports: [FormsModule,ReactiveFormsModule,InputGroupAddonModule,InputGroupModule,ButtonModule,Navbar2Component],
+  imports: [FormsModule,ReactiveFormsModule,InputGroupAddonModule,InputNumberModule,InputGroupModule,ButtonModule,Navbar2Component,CommonModule],
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.css'
 })
@@ -75,6 +76,15 @@ export  default class EditComponentVehicle implements OnInit {
       });
     }
   }
+  cancel() {
+    // Redirigir a otra ruta, por ejemplo, la página principal
+    this.router.navigate(['/vehicle']);
+  }
+  // Métodos de acceso seguros
+  get licence_plate() { return this.form.get('licence_plate')!; }
+  get model() { return this.form.get('model')!; }
+  get year() { return this.form.get('year')!; }
+  get load_capacity() { return this.form.get('load_capacity')!; }
 
 
 }

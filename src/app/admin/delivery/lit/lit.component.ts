@@ -1,10 +1,9 @@
-import { Component, NgModule, OnInit } from '@angular/core';
-import { DataService } from '../../../services/delivery';
+import { Component, NgModule, OnInit,inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
-import { deliveryM } from '../../../models/deliveryModel';
-
+import { Delivery } from '../../../models/deliverydModel';
+import { DeliveriDService } from '../../../services/delivery.service';
 @Component({
   selector: 'app-lit',
   standalone: true,
@@ -12,36 +11,14 @@ import { deliveryM } from '../../../models/deliveryModel';
   templateUrl: './lit.component.html',
   styleUrl: './lit.component.css'
 })
-export  default class LitComponent implements OnInit {
-  combinedData: any[] = [];
-  cols=[{ field: 'id', header: 'ID' },
-      { field: 'name_client', header: 'client' },
-      { field: 'name_driver', header: 'conductor' },
-      { field: '', header: 'telefono' },
-    {field:'email_address',header:'correo'}];
-  constructor(private dataService: DataService) { }
+export  default class LitComponent  {
+  
+  private deliveriService=inject(DeliveriDService);
+  deliveries:Delivery[]=[];
+  constructor(
+  ){}
   ngOnInit(): void {
-    this.dataService.getAllData().subscribe(data => {
-      const [clients, drivers, vehicles, cargos, routes, deliveries] = data;
-
-      this.combinedData = deliveries.map((delivery: deliveryM) => {
-        const client = clients.find(u => u.id === delivery.client_id);
-        const driver = drivers.find(d => d.id === delivery.driver_id);
-        const vehicle = vehicles.find(v => v.id === delivery.vehicle_id);
-        const cargo = cargos.find(c => c.id === delivery.cargo_id);
-        const route = routes.find(r => r.id === delivery.route_id);
-        // crear rama
-        return {
-          ...delivery,
-          client_name: client ? client.name : 'Unknown Client',
-          driver_name: driver ? driver.name : 'Unknown Driver',
-          vehicle_name: vehicle ? vehicle.licence_plate : 'Unknown Vehicle',
-          cargo_name: cargo ? cargo.description : 'Unknown Cargo',
-          route_name: route ? route.origin : 'Unknown Route',
-        };
-      });
-    })
-
-      console.log(this.combinedData);
+      ///this.deliveriService.list().subscribe(deliveri=>{this.deliveries=deliveri})
+     
   }
 }

@@ -6,8 +6,13 @@
 <br>
 <br>
 <br>
+<br>
+<br>
 
 <div class="form-container">
+  <div>
+    <h4 class="form-title">Actualizar Vehiculo</h4>
+  </div>
 <form [formGroup]="form"  >
     
     <div>
@@ -15,8 +20,11 @@
         <p-inputGroupAddon>
           <i class="pi pi-ticket"></i>
         </p-inputGroupAddon>
-        <input pInputText placeholder="licence plate" formControlName="licence_plate"/>
+        <input pInputText placeholder="licence plate" formControlName="licence_plate" class="form-control"/>
       </p-inputGroup>
+    </div>
+    <div *ngIf="licence_plate.invalid && licence_plate.touched" class="text-danger">
+      La Placa de matrícula es requerido.
     </div>
     <br>
     <div>
@@ -24,8 +32,11 @@
           <p-inputGroupAddon>
             <i class="pi pi-truck"></i>
           </p-inputGroupAddon>
-          <input pInputText placeholder="modelo" formControlName="model" />
+          <input pInputText placeholder="modelo" formControlName="model" class="form-control"/>
         </p-inputGroup>
+    </div>
+    <div *ngIf="model.invalid && model.touched" class="text-danger">
+      El modelo es requerido.
     </div>
     <br>
     <div>
@@ -33,7 +44,9 @@
           <p-inputGroupAddon>
             <i class="pi pi-calendar"></i>
           </p-inputGroupAddon>
-          <input pInputText placeholder="año" formControlName="year"/>
+          <p-inputNumber placeholder="año" formControlName="year" inputId="minmax"            
+          [min]="2000" 
+          [max]="2024"/>
         </p-inputGroup>
     </div>
     <br>
@@ -42,14 +55,25 @@
           <p-inputGroupAddon>
             <i class="pi pi-warehouse"></i>
           </p-inputGroupAddon>
-          <input pInputText placeholder="capacidad" formControlName="load_capacity" />
+          <p-inputNumber  
+          inputId="minmaxfraction" 
+            mode="decimal" 
+            [min]="2.0"
+          [max]="5.0"
+        [minFractionDigits]="2" 
+            [maxFractionDigits]="5" placeholder="capacidad" formControlName="load_capacity" />
         </p-inputGroup>
     </div>
     
     <br>
-    <p-button (click)="save()" severity="success">
-        Agregar
-    </p-button>
+    <div class="button-container">
+      <p-button (click)="save()" severity="success" class="button">
+          Actualizar
+      </p-button>
+      <p-button (click)="cancel()" severity="secondary" class="button">
+        Cancelar
+      </p-button>
+    </div>
   </form>
 
 

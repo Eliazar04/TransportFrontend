@@ -23,9 +23,13 @@
 }
 .masthead .container {
     position: relative;
-    /*z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
+    
 }
 
+.container-fluid{
+    background-color: rgba(0,0,0, 0.5);
+    /*z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
+}
 .masthead-subheading {
     color: black;
     font-size: 1.5rem;

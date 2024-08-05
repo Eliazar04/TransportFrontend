@@ -1,1 +1,49 @@
-<h1>bfjb</h1>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container mt-4">
+    <h2>Delivery List</h2>
+    <p-table [value]="deliveries" class="p-datatable-striped">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>ID</th>
+          <th>Client Name</th>
+          <th>Vehicle Name</th>
+          <th>Origen</th>
+          <th>Destino</th>
+          <th>Paquete</th>
+          <th>Shipping Date</th>
+          <th>Driver Name</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-delivery>
+        <tr>
+          <td>{{ delivery.id }}</td>
+          <td>{{ delivery.clientName }}</td>
+          <td>{{ delivery.vehicleName }}</td>
+          <td>{{ delivery.origen }}</td>
+          <td>{{ delivery.destino }}</td>
+          <td>{{ delivery.paquete }}</td>
+          <td>{{ delivery.shippingDate | date:'short' }}</td>
+          <td>{{ delivery.driverName }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>

@@ -1,5 +1,5 @@
 .form-container {
-    max-width: 244px; /* Ajusta esto según tus necesidades */
+    max-width: 300px; /* Ajusta esto según tus necesidades */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
   }
   
@@ -15,5 +15,7 @@
   .p-inputNumber {
     flex: 3 ;
   }
-  
+  .button-container .button {
+    margin-right: 10px; /* Puedes ajustar este valor según la separación que desees */
+  }
   

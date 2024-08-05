@@ -1,11 +1,16 @@
 <!-- Navbar Component -->
 <app-navbar2></app-navbar2>
 
-
+<br>
+<br>
+<br>
 
 <!-- Main Container -->
 <div class="container mt-5">
   <div class="form-container">
+    <div>
+      <h4 class="form-title">Agregar Nuevo Paquete</h4>
+    </div>
     <!-- Form with Angular Reactive Forms -->
     <form [formGroup]="form">
       
@@ -67,7 +72,8 @@
       </div>
       
       <!-- Submit Button -->
-      <button type="button" class="btn btn-success" (click)="create()">Agregar</button>
+      <button type="button" class="btn btn-success button" (click)="create()">Agregar</button>
+      <button type="button" class="btn btn-danger button" (click)="cancel()">Cancelar</button>
     </form>
   </div>
 </div>

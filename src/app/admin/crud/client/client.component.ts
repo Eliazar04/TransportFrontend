@@ -9,11 +9,13 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { DialogService } from 'primeng/dynamicdialog';
 import { Navbar2Component } from '../../../main/navbar2/navbar2.component';
+import {  InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { InputGroupModule } from 'primeng/inputgroup';
 
 @Component({
   selector: 'app-client',
   standalone: true,
-  imports: [TableModule,CommonModule,TableComponent,RouterModule,DialogModule,ButtonModule,Navbar2Component],
+  imports: [TableModule,CommonModule,TableComponent,RouterModule,DialogModule,ButtonModule,Navbar2Component, InputGroupAddonModule, InputGroupModule],
   templateUrl: './client.component.html',
   styleUrl: './client.component.css'
 })

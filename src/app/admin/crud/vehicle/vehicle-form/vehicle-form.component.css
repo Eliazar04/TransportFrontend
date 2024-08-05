@@ -1,5 +1,5 @@
 .form-container {
-    max-width: 250px; /* Ajusta esto según tus necesidades */
+    max-width: 300px; /* Ajusta esto según tus necesidades */
     margin:  auto; /* Centra el contenedor horizontalmente */
   }
   
@@ -16,4 +16,6 @@
     flex: 5 ;
   }
   
-  
+  .button-container .button {
+    margin-right: 10px; /* Puedes ajustar este valor según la separación que desees */
+  }

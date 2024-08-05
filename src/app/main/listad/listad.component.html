@@ -1,0 +1,41 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<app-navbar2></app-navbar2>
+
+
+<div class="container mt-4">
+    <h2 class="mb-4">Lista de Envios</h2>
+    <p-table [value]="deliveries" class="p-datatable-striped">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>ID</th>
+          <th>Cliente</th>
+          <th>Placa</th>
+          <th>Origen</th>
+          <th>Destino</th>
+          <th>Paquete</th>
+          <th>Shipping Date</th>
+          <th>Conductor</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-delivery>
+        <tr>
+          <td>{{ delivery.id }}</td>
+          <td>{{ delivery.clientName }}</td>
+          <td>{{ delivery.vehicleName }}</td>
+          <td>{{ delivery.origen }}</td>
+          <td>{{ delivery.destino }}</td>
+          <td>{{ delivery.paquete }}</td>
+          <td>{{ delivery.shippingDate  }}</td>
+          <td>{{ delivery.driverName }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  

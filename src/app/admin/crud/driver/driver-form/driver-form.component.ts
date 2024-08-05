@@ -41,6 +41,15 @@ export default class DriverFormComponent {
       });
     }
   }
+  cancel() {
+    // Redirigir a otra ruta, por ejemplo, la página principal
+    this.router.navigate(['/driver']);
+  }
+  // Métodos de acceso seguros
+  get name() { return this.form.get('name')!; }
+  get address() { return this.form.get('address')!; }
+  get phone() { return this.form.get('phone')!; }
+  get email_address() { return this.form.get('email_address')!; }
 }
 
 

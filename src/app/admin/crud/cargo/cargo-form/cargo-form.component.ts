@@ -49,6 +49,10 @@ export default class cargoFormComponent {
       });
     }
   }
+  cancel() {
+    // Redirigir a otra ruta, por ejemplo, la página principal
+    this.router.navigate(['/cargo']);
+  }
 
   get weightControl() {
     return this.form.get('weight');

@@ -4,7 +4,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 import { DriverService } from '../../../../services/driver.service';
 import { driverM } from '../../../../models/driverModel';
 import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { ButtonModule } from 'primeng/button';
@@ -12,7 +12,7 @@ import { Navbar2Component } from '../../../../main/navbar2/navbar2.component';
 @Component({
   selector: 'app-edit',
   standalone: true,
-  imports: [FormsModule,ReactiveFormsModule,InputGroupAddonModule,InputGroupModule,ButtonModule,Navbar2Component],
+  imports: [FormsModule,ReactiveFormsModule,InputGroupAddonModule,InputGroupModule,ButtonModule,Navbar2Component, CommonModule],
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.css'
 })
@@ -72,6 +72,15 @@ export  default class EditComponentDriver implements OnInit {
       });
     }
   }
+  cancel() {
+    // Redirigir a otra ruta, por ejemplo, la página principal
+    this.router.navigate(['/driver']);
+  }
+  // Métodos de acceso seguros
+  get name() { return this.form.get('name')!; }
+  get address() { return this.form.get('address')!; }
+  get phone() { return this.form.get('phone')!; }
+  get email_address() { return this.form.get('email_address')!; }
 
 
 }

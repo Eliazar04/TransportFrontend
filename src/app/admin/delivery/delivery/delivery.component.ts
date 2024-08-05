@@ -89,7 +89,7 @@ export default class DeliveryComponent implements OnInit {
     this.http.post(url, data).subscribe(
       response => {
         console.log('Success:', response);
-        this.router.navigate(['/internal'])
+        this.router.navigate(['/dl'])
       },
       error => {
         console.error('Error:', error);
