@@ -1,0 +1,21 @@
+<app-navbar2></app-navbar2>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container mt-4">
+  <h2>Drivers Without Insurance</h2>
+  <div class="form-group">
+    <label for="driverSelect">Select Driver:</label>
+    <select id="driverSelect" class="form-control" [(ngModel)]="selectedDriverId">
+      <option *ngFor="let driver of driversWithoutInsurance" [value]="driver.id">
+        {{ driver.name }}
+      </option>
+    </select>
+  </div>
+  <button class="btn btn-primary mt-2" (click)="asegurarDriver()">Asegurar</button>
+</div>
+
+  
