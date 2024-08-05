@@ -1,0 +1,6 @@
+/* table.component.css */
+.table-container {
+    width: 100%; /* Por defecto toma todo el ancho disponible */
+    height: auto; /* Ajustable */
+  }
+  

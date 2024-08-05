@@ -1,0 +1,70 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #5B3705;*/
+    background-color: #472A02;
+}
+.container {
+    max-width: 400px;
+}
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+    background-color: #fff;
+    border-bottom: none;
+    text-align: center;
+    padding: 2rem 0;
+}
+.card-header h3 {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+.card-body {
+    padding: 2rem;
+}
+.form-control {
+    border-radius: 2rem;
+}
+
+.form-control:focus {
+    /*background-color: #ffe0b2; /* Cambia este color al que prefieras */
+    border-color: #ff7e5f;
+    box-shadow: 0 0 0 0.2rem rgba(255, 126, 95, 0.25);
+}
+
+.btn-primary {
+    border-radius: 2rem;
+    padding: 0.75rem 1.5rem;
+    background: #BF730C;
+    border: none;
+    transition: background 0.3s ease;
+}
+.btn-primary:hover {
+    background: #feb47b;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-control::placeholder {
+    color: #999;
+}
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 0.875rem;
+    color: #ff7e5f;
+}
+.forgot-password:hover {
+    text-decoration: underline;
+}

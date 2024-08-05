@@ -1,0 +1,59 @@
+.header-image {
+    width: 100%;
+    height: auto; /* Para asegurar que la imagen se ajuste proporcionalmente */
+    max-height: calc(100vh - 80px); /* Máxima altura igual a la altura de la pantalla menos la barra de navegación */
+    object-fit: cover;
+}
+.products-section {
+    padding: 2rem 1rem;
+}
+
+
+.masthead {
+    position: relative;
+    background-image: url('/img/camiones2.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Altura igual a la altura del viewport */
+    color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.masthead .container {
+    position: relative;
+    
+}
+
+.container-fluid{
+    background-color: rgba(0,0,0, 0.5);
+    /*z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
+}
+.masthead-subheading {
+    color: black;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.masthead-heading {
+    -webkit-text-stroke: 1px white; /* Contorno negro para navegadores WebKit (Safari, Chrome) */
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.btn-primary {
+    background-color: #8B4513; /* Color de fondo del botón */
+    border-color: #8B4513; /* Color del borde del botón */
+}
+
+.btn-primary:hover {
+    background-color: #6A3D09; /* Color de fondo del botón al pasar el ratón */
+    border-color: #6A3D09; /* Color del borde del botón al pasar el ratón */
+}

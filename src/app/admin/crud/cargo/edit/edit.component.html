@@ -1,0 +1,91 @@
+<app-navbar2></app-navbar2>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="form-container container">
+  <div>
+    <h4 class="form-title">Actualizar Paquete</h4>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="save()">
+    
+    <!-- Description Input Group -->
+    <div class="mb-3">
+      <div class="input-group">
+        <span class="input-group-text">
+          <i class="pi pi-book"></i>
+        </span>
+        <input type="text" class="form-control" placeholder="Descripción" formControlName="description"/>
+      </div>
+      <!-- Error Message for Description -->
+      <div *ngIf="form.controls['description'].invalid && (form.controls['description'].dirty || form.controls['description'].touched)" class="alert alert-danger mt-2">
+        Descripción es requerida.
+      </div>
+    </div>
+    
+    <!-- Weight Input Group -->
+    <div class="mb-3">
+      <div class="input-group">
+        <span class="input-group-text">
+          <i class="pi pi-gauge"></i>
+        </span>
+        <p-inputNumber
+          inputId="minmaxfraction"
+          mode="decimal"
+          [min]="2.0"
+          [max]="5.0"
+          [minFractionDigits]="2"
+          [maxFractionDigits]="5"
+          placeholder="Peso"
+          formControlName="weight"
+          class="form-control">
+        </p-inputNumber>
+      </div>
+      <!-- Error Message for Weight -->
+      <div *ngIf="form.controls['weight'].invalid && (form.controls['weight'].dirty || form.controls['weight'].touched)" class="alert alert-danger mt-2">
+        <div *ngIf="form.controls['weight'].errors?.['required']">Peso es requerido.</div>
+        <div *ngIf="form.controls['weight'].errors?.['min']">El peso no puede ser menor que 2.0.</div>
+        <div *ngIf="form.controls['weight'].errors?.['max']">El peso no puede ser mayor que 5.0.</div>
+        <div *ngIf="form.controls['weight'].errors?.['negativeNumber']">El peso no puede ser negativo.</div>
+      </div>
+    </div>
+    
+    <!-- Dimensions Input Group -->
+    <div class="mb-3">
+      <div class="input-group">
+        <span class="input-group-text">
+          <i class="pi pi-box"></i>
+        </span>
+        <input type="text" class="form-control" placeholder="Dimensiones" formControlName="dimensions"/>
+      </div>
+      <!-- Error Message for Dimensions -->
+      <div *ngIf="form.controls['dimensions'].invalid && (form.controls['dimensions'].dirty || form.controls['dimensions'].touched)" class="alert alert-danger mt-2">
+        Dimensiones son requeridas.
+      </div>
+    </div>
+    
+    <!-- Status Input Group -->
+    <div class="mb-3">
+      <div class="input-group">
+        <span class="input-group-text">
+          <i class="pi pi-wave-pulse"></i>
+        </span>
+        <input type="text" class="form-control" placeholder="Estado" formControlName="status"/>
+      </div>
+      <!-- Error Message for Status -->
+      <div *ngIf="form.controls['status'].invalid && (form.controls['status'].dirty || form.controls['status'].touched)" class="alert alert-danger mt-2">
+        Estado es requerido.
+      </div>
+    </div>
+    
+    <br>
+    <div class="button-container">
+      <button type="submit" class="btn btn-success button" [disabled]="form.invalid">Actualizar</button>
+      <button type="button" class="btn btn-secondary button" (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+</div>

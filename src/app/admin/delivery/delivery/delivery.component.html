@@ -1,0 +1,58 @@
+<app-navbar2></app-navbar2>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div>
+    <h2 class="form-title">Realizar Envío</h2>
+  </div>
+  <form>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="client">Seleccione el cliente</label>
+        <select id="client" [(ngModel)]="selectedClientId" name="client" class="form-control">
+          <option *ngFor="let client of clients" [value]="client.id">{{ client.name }}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="driver">Seleccione el conductor</label>
+        <select id="driver" [(ngModel)]="selectedDriverId" name="driver" class="form-control">
+          <option *ngFor="let driver of drivers" [value]="driver.id">{{ driver.name }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="cargo">Seleccione el cargo</label>
+        <select id="cargo" [(ngModel)]="selectedCargoId" name="cargo" class="form-control">
+          <option *ngFor="let cargo of cargos" [value]="cargo.id">{{ cargo.description }}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="vehicle">Seleccione el vehículo</label>
+        <select id="vehicle" [(ngModel)]="selectedVehicleId" name="vehicle" class="form-control">
+          <option *ngFor="let vehicle of vehicles" [value]="vehicle.id">{{ vehicle.licence_plate }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <label for="route">Seleccione la ruta</label>
+        <select id="route" [(ngModel)]="selectedRouteId" name="route" class="form-control">
+          <option *ngFor="let route of routes" [value]="route.id">{{ route.origin + ' to ' + route.destination }}</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" (click)="sendData()">
+      Agregar
+    </button>
+  </form>
+</div>

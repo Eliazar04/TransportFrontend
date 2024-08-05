@@ -1,0 +1,21 @@
+.form-container {
+    max-width: 300px; /* Ajusta esto según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+  }
+  
+  .p-inputGroup {
+    width: 100%; /* Asegura que el grupo de entrada no se extienda */
+  }
+  
+  .p-inputGroupAddon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .p-inputNumber {
+    flex: 3 ;
+  }
+  .button-container .button {
+    margin-right: 10px; /* Puedes ajustar este valor según la separación que desees */
+  }
+  

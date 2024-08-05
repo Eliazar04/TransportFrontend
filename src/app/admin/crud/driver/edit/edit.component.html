@@ -1,0 +1,77 @@
+
+<app-navbar2></app-navbar2>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="form-container">
+  <div>
+    <h4 class="form-title">Actualizar Conductor</h4>
+  </div>
+<form [formGroup]="form"  >
+    
+    <div margin="my-6">
+      <p-inputGroup class="p-field my-6">
+        <p-inputGroupAddon>
+          <i class="pi pi-user"></i>
+        </p-inputGroupAddon>
+        <input pInputText placeholder="name" formControlName="name"/>
+      </p-inputGroup>
+    </div>
+    <div *ngIf="name.invalid && name.touched" class="text-danger">
+      El nombre es requerido.
+    </div>
+    <br>
+    <div>
+        <p-inputGroup class="p-field p-m-5">
+          <p-inputGroupAddon>
+            <i class="pi pi-map-marker"></i>
+          </p-inputGroupAddon>
+          <input pInputText placeholder="direccion" formControlName="address" />
+        </p-inputGroup>
+    </div>
+    <div *ngIf="address.invalid && address.touched" class="text-danger">
+      La dirección es requerida.
+    </div>
+    <br>
+    <div>
+        <p-inputGroup class="p-field p-mb-2">
+          <p-inputGroupAddon>
+            <i class="pi pi-phone"></i>
+          </p-inputGroupAddon>
+          <input pInputText placeholder="telefono" formControlName="phone"/>
+        </p-inputGroup>
+    </div>
+    <div *ngIf="phone.invalid && phone.touched" class="text-danger">
+      El teléfono es requerido.
+    </div>
+    <br>
+    <div>
+        <p-inputGroup class="p-field p-mb-2">
+          <p-inputGroupAddon>
+            <i class="pi pi-at"></i>
+          </p-inputGroupAddon>
+          <input pInputText placeholder="email" formControlName="email_address" />
+        </p-inputGroup>
+    </div>
+    <div *ngIf="email_address.invalid && email_address.touched" class="text-danger">
+      El correo es requerido y debe ser válido.
+    </div>
+    <br>
+    <div class="button-container">
+    <p-button (click)="save()" severity="success" class="button">
+        Actualizar
+    </p-button>
+    <p-button (click)="cancel()" severity="secondary" class="button">
+      Cancelar
+    </p-button>
+  </div>
+  </form>
+
+
+</div>

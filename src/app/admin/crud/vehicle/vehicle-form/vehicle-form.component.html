@@ -1,0 +1,82 @@
+
+<app-navbar2></app-navbar2>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="form-container">
+  <div>
+    <h4 class="form-title">Agregar Nuevo Vehiculo</h4>
+  </div>
+<form [formGroup]="form"  >
+    
+    <div>
+      <p-inputGroup >
+        <p-inputGroupAddon>
+          <i class="pi pi-ticket"></i>
+        </p-inputGroupAddon>
+        <input pInputText placeholder="licence plate" formControlName="licence_plate" class="form-control"/>
+      </p-inputGroup>
+    </div>
+    <div *ngIf="licence_plate.invalid && licence_plate.touched" class="text-danger">
+      La Placa de matrícula es requerido.
+    </div>
+    <br>
+    <div>
+        <p-inputGroup >
+          <p-inputGroupAddon>
+            <i class="pi pi-truck"></i>
+          </p-inputGroupAddon>
+          <input pInputText placeholder="modelo" formControlName="model" class="form-control"/>
+        </p-inputGroup>
+    </div>
+    <div *ngIf="model.invalid && model.touched" class="text-danger">
+      El modelo es requerido.
+    </div>
+    <br>
+    <div>
+        <p-inputGroup >
+          <p-inputGroupAddon>
+            <i class="pi pi-calendar"></i>
+          </p-inputGroupAddon>
+          <p-inputNumber 
+          placeholder="año" formControlName="year"
+         inputId="minmax" 
+            
+            [min]="2000" 
+            [max]="2024" />
+        
+        </p-inputGroup>
+    </div>
+    <br>
+    <div>
+        <p-inputGroup >
+          <p-inputGroupAddon>
+            <i class="pi pi-warehouse"></i>
+          </p-inputGroupAddon>
+          <p-inputNumber  
+          inputId="minmaxfraction" 
+            mode="decimal" 
+        [minFractionDigits]="2" 
+            [maxFractionDigits]="5" placeholder="capacidad" formControlName="load_capacity" />
+        </p-inputGroup>
+    </div>
+    
+    <br>
+    <div class="button-container">
+    <p-button (click)="create()" severity="success" class="button">
+        Agregar
+    </p-button>
+    <p-button (click)="cancel()" severity="secondary" class="button">
+      Cancelar
+    </p-button>
+  </div>
+  </form>
+
+</div>
+  

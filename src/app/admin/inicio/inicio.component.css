@@ -1,0 +1,11 @@
+.carousel-item {
+    height: 490px; /* Altura deseada del carrusel */
+    background-color: rgba(47, 27, 0, 0.1); /* Fondo negro para las imágenes */
+  }
+  
+  .carousel-item img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  

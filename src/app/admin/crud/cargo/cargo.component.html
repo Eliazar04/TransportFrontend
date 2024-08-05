@@ -1,0 +1,38 @@
+<!-- src/app/components/cargo-list/cargo-list.component.html -->
+<app-navbar2></app-navbar2>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+
+    <p-inputGroup>
+        <p-inputGroupAddon>
+            <i class="pi pi-box" ></i>
+        </p-inputGroupAddon>
+        <p-button  routerLink="new" severity="success"> Nuevo Paquete 
+        </p-button>
+    </p-inputGroup>
+</div>
+
+
+
+
+
+<app-table [data]="cargos" [cols]="cols"
+ [name]="name" (editEvent)="onEdit($event)"
+  (deleteEvent)="deleteCargo($event)"
+  [ngStyle]="{'width': '50%', 'height': '300px'}"
+  [icon1]="icon1" [icon2]="icon2"
+  >
+</app-table>
+
+<!-- dialogo para editar-->
+
+
+
+
