@@ -12,7 +12,7 @@ export const routes: Routes = [
 
     //{path:'',loadComponent:()=>import("./main/main/main.component")},
 
-
+    {path:'seguro',loadComponent:()=>import("./main/seguro/seguro.component")},
    
     {path:'dl',loadComponent:()=>import("./main/listad/listad.component")},
     { path: 'login', loadComponent: () => import("./authentication/login/login.component")},
